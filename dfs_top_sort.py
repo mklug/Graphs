@@ -58,16 +58,16 @@ def top_sort(G):
     res = []
     visited = {k: False for k in G.keys()}
 
-    def go(node):
+    def dfs(node):
         if visited[node]:
             return
         for x in G[node]:
-            go(x)
+            dfs(x)
         res.append(node)
         visited[node] = True
 
     for node in G.keys():
-        go(node)
+        dfs(node)
     return res[::-1]
 
 
