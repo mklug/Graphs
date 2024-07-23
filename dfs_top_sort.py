@@ -80,7 +80,7 @@ def has_cycle(G):
     WHITE, GRAY, BLACK = 0, 1, 2
     visited = {k: WHITE for k in G.keys()}
 
-    def go(node):
+    def dfs(node):
         # Returns False if we find a cycle.
         if visited[node] == GRAY:
             return False
@@ -88,7 +88,7 @@ def has_cycle(G):
         for x in G[node]:
             if visited[node] == BLACK:
                 continue
-            if not go(x):
+            if not dfs(x):
                 return False
 
         visited[node] = BLACK
@@ -96,7 +96,7 @@ def has_cycle(G):
 
     for node in G.keys():
         if visited[node] == WHITE:
-            if not go(node):
+            if not dfs(node):
                 return False
     return True
 
@@ -110,7 +110,7 @@ def top_sortable(G):
     WHITE, GRAY, BLACK = 0, 1, 2
     visited = {k: WHITE for k in G.keys()}
 
-    def go(node):
+    def dfs(node):
         # Returns False if we find a cycle.
         if visited[node] == GRAY:
             return False
@@ -118,7 +118,7 @@ def top_sortable(G):
         for x in G[node]:
             if visited[node] == BLACK:
                 continue
-            if not go(x):
+            if not dfs(x):
                 return False
         visited[node] = BLACK
         res.append(node)
@@ -126,7 +126,7 @@ def top_sortable(G):
 
     for node in G.keys():
         if visited[node] == WHITE:
-            if not go(node):
+            if not dfs(node):
                 return []
     return res[::-1]
 
