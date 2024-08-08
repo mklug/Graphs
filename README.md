@@ -1,6 +1,6 @@
 # Graphs
 
-A collection of some graph algorithms.  I've used these on various programming challenge websites, so they are in some sense rigorously tested.  Your mileage may vary and I would be curious to hear about any errors.  
+A collection of some graph algorithms.  I've used these on various programming challenge websites, so they are in some sense rigorously tested.  Your mileage may vary and I would be curious to hear about any bugs.  
 
 The different directories contain implementations of:
 
