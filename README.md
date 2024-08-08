@@ -14,3 +14,4 @@ The different directories contain implementations of:
 - Bellman-Ford algorithm for minimal path trees with a given source vertex.
 - An application of Bellman-Ford to finding arbitrage oppurtunities in exchange rate graphs.
 - Dijkstra's algorithm for minimal path trees with a given source vertex (both heap-based and set-based).
+- Pruning and BFS-based algorithms for finding the center(s) of a tree.
