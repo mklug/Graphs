@@ -1,13 +1,13 @@
 '''
-    Kosaraju's algorithm to find the strongly connected
+    Kosaraju's algorithm to find the strongly-connected
     components of a directed graph.  In fact, it does a 
     bit more and also finds a topological ordering on the 
     strongly connected components of the input graph.  
 
     A naive algorithm for doing this would do a search
-    from eavh pair of vertices to see if they can reach each
-    other, thus taking time O((V+E)^2).  Kosaraju's algorithm
-    accomplishes this in time O(V+E).
+    from each pair of vertices to see if they can reach each
+    other, thus taking O((V+E)^2) time.  Kosaraju's algorithm
+    accomplishes this in O(V+E) time.
 '''
 
 import collections
